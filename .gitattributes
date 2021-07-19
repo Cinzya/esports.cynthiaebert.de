@@ -1,0 +1,6 @@
+* !text !filter !merge !diff
+C:/Program[[:space:]]Files/Git/video filter=lfs diff=lfs merge=lfs -text
+./video filter=lfs diff=lfs merge=lfs -text
+.video filter=lfs diff=lfs merge=lfs -text
+*/video filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
