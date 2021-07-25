@@ -12,57 +12,13 @@
   font-style: normal;
 }
 
-.dark-theme {
-  background-color: #101315;
-  color: #f4f2ff;
-}
-
-.dark-theme .container {
-  background-color: #1d2225;
-}
-
-.dark-theme .container .slider:before {
-  background-image: url("/img/SVG/crescent-moon-svgrepo-com.svg");
-  background-size: 15px 15px;
-  background-position: 6px;
-  background-color: #1d2225;
-}
-
-.dark-theme .container .social {
-  color: #f4f2ff;
-}
-
-.dark-theme .container h3 {
-  color: #696969;
-}
-
-.light-theme {
-  background-color: #f4f6fb;
-  color: initial;
-}
-
-.light-theme .container {
-  background-color: white;
-  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-}
-
-.light-theme .container h3 {
-  color: #9ea3b2;
-}
-
-.light-theme .container .slider:before {
-  background-image: url("/img/SVG/sun-svgrepo-com.svg");
-  background-size: 18px 18px;
-  background-position: 4px;
-  background-color: white;
-}
-
 html {
   min-height: 100%;
 }
 
 body {
+  background-color: #101315;
+  color: #f4f2ff;
   font-family: "Moon 2.0";
   letter-spacing: 0.1875rem;
   padding: 0;
@@ -70,6 +26,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+body .container {
+  background-color: #1d2225;
+}
+
+body .container .slider:before {
+  background-image: url("/img/SVG/crescent-moon-svgrepo-com.svg");
+  background-size: 15px 15px;
+  background-position: 6px;
+  background-color: #1d2225;
+}
+
+body .container .social {
+  color: #f4f2ff;
+}
+
+body .container h3 {
+  color: #696969;
 }
 
 body #myVideo {
