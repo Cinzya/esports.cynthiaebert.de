@@ -68,6 +68,7 @@ body .container {
   width: 600px;
   margin: 18px auto;
   text-align: center;
+  z-index: 1;
   /* The switch - the box around the slider */
 }
 
@@ -266,6 +267,12 @@ body .container #skills__section .skills .skill span {
   }
   .container {
     margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
