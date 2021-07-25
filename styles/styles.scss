@@ -237,3 +237,14 @@ body {
         }
     }
 }
+
+@media (min-height: 927px) {
+  body {
+    align-items: center;
+    height: 100%;
+  }
+
+  .container {
+    margin: 0 auto !important;
+  }
+}

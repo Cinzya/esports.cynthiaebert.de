@@ -256,4 +256,16 @@ body .container #skills__section .skills .skill .logo-only {
 body .container #skills__section .skills .skill span {
   margin-left: 10px;
 }
+
+@media (min-height: 927px) {
+  body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .container {
+    margin: 0 auto !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
