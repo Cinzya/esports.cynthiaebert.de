@@ -258,3 +258,13 @@ body {
     }
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    .container {
+      .content__wrapper {
+        padding: 50px 30px;
+      }
+    }
+  }
+}
