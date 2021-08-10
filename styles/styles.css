@@ -12,27 +12,38 @@
   font-style: normal;
 }
 
-.dark-theme {
-  background-color: #101315;
-  color: #f4f2ff;
+html {
+  min-height: 100%;
 }
 
-.dark-theme .container {
+body {
+  background-color: #101315;
+  color: #f4f2ff;
+  font-family: "Moon 2.0";
+  letter-spacing: 0.1875rem;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container {
   background-color: #1d2225;
 }
 
-.dark-theme .container .slider:before {
+body .container .slider:before {
   background-image: url("/img/SVG/crescent-moon-svgrepo-com.svg");
   background-size: 15px 15px;
   background-position: 6px;
   background-color: #1d2225;
 }
 
-.dark-theme .container .social {
+body .container .social {
   color: #f4f2ff;
 }
 
-.dark-theme .container h3 {
+body .container h3 {
   color: #696969;
 }
 
@@ -71,6 +82,7 @@ body .container {
   width: 600px;
   margin: 18px auto;
   text-align: center;
+  z-index: 1;
   /* The switch - the box around the slider */
 }
 
@@ -258,5 +270,29 @@ body .container #skills__section .skills .skill .logo-only {
 
 body .container #skills__section .skills .skill span {
   margin-left: 10px;
+}
+
+@media (min-height: 927px) {
+  body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .container {
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  body .container .content__wrapper {
+    padding: 50px 30px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
