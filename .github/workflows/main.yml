@@ -34,7 +34,6 @@ jobs:
             rm -rfv ~/public_html/esports/cinzya.live-main/
             cd public_html
             cd esports
-            cd ..
             wget https://github.com/Cinzya/cinzya.live/archive/refs/heads/main.zip
             unzip main.zip
             rm main.zip
