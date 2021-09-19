@@ -262,6 +262,9 @@ body .container #skills__section .skills .skill span {
   body .container {
     margin: 0;
   }
+  body video {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
