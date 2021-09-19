@@ -243,8 +243,10 @@ body {
 
 @media (max-width: 600px) {
   body {
+    background-color: $container-black;
     .container {
       margin: 0;
+      background-color: initial;
     }
     video {
       display: none;
