@@ -259,8 +259,12 @@ body .container #skills__section .skills .skill span {
 }
 
 @media (max-width: 600px) {
+  body {
+    background-color: #1d2225;
+  }
   body .container {
     margin: 0;
+    background-color: initial;
   }
   body video {
     display: none;
