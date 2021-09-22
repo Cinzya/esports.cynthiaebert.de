@@ -54,7 +54,7 @@ body .container {
   left: 0;
   right: 0;
   border-radius: 5px;
-  width: 600px;
+  max-width: 600px;
   margin: 18px auto;
   text-align: center;
   z-index: 1;
