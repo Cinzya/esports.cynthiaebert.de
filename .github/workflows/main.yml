@@ -33,13 +33,15 @@ jobs:
           script: |
             cd public_html
             cd esports
+            mv cinzya.live-main/video video
             rm -rfv ~/public_html/esports/cinzya.live-main/
-            cd ..
             wget https://github.com/Cinzya/cinzya.live/archive/refs/heads/main.zip
             unzip main.zip
             rm main.zip
+            mv video cinzya.live-main/video
             cd cinzya.live-main
             rm README.md
+            rm -rfv ~/public_html/esports/cinzya.live-main/.github
             ls -l
             cd ..
             ls -l

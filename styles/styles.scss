@@ -14,7 +14,9 @@
 
 $container-black: #1d2225;
 $body-black: #101315;
-$blue: #358CC3; 
+$blue: #358CC3;
+$white: #f4f2ff;
+$grey: #696969;
 
 
 html {
@@ -27,7 +29,8 @@ html {
 }
 
 body {
-
+  background-color: $body-black;
+  color: $white;
   font-family: "Moon 2.0";
   letter-spacing: 0.1875rem;
   padding: 0;
@@ -46,6 +49,7 @@ body {
   }
 
   .container {
+    background-color: $container-black;
     position: relative;
     left: 0;
     right: 0;
@@ -147,6 +151,7 @@ body {
         }
 
         h3 {
+          color: $grey;
           text-align: left;
         }
 
@@ -163,7 +168,12 @@ body {
             align-items: center;
             // flex-basis: 40%;
             margin: 0 12px;
-    
+            color: #f4f2ff;
+
+            &:hover {
+              cursor: pointer;
+            }
+
             img {
               height: 32px;
             }
@@ -223,6 +233,45 @@ body {
     }
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 10%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (min-height: 927px) {
   body {
     align-items: center;
@@ -237,8 +286,13 @@ body {
 
 @media (max-width: 600px) {
   body {
+    background-color: $container-black;
     .container {
       margin: 0;
+      background-color: initial;
+    }
+    video {
+      display: none;
     }
   }
 }
