@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  background-color: #101315;
+  color: #f4f2ff;
+  font-family: "Moon 2.0";
+  letter-spacing: 0.1875rem;
+  padding: 0;
+  margin: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body a {
+  color: #358CC3;
+}
+
+body #back {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=impressum.css.map */

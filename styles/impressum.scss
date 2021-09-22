@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Moon 2.0";
+    src: url("/font/Moon2.0-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Moon 2.0";
+    src: url("/font/Moon2.0-Bold.otf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  $container-black: #1d2225;
+  $body-black: #101315;
+  $blue: #358CC3;
+  $white: #f4f2ff;
+  $grey: #696969;
+  
+  
+  html {
+    min-height: 100%;
+  }
+  
+  body {
+    text-align: center;
+    background-color: $body-black;
+    color: $white;
+    font-family: "Moon 2.0";
+    letter-spacing: 0.1875rem;
+    padding: 0;
+    margin: 45px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+        color: $blue;
+    }
+
+    #back {
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+    }
+  }
