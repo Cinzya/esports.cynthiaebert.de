@@ -21,28 +21,12 @@ html {
   min-height: 100%;
 }
 
+
+html {
+  min-height: 100%;
+}
+
 body {
-  background-color: $body-black;
-  color: #f4f2ff;
-
-  .container {
-      background-color: $container-black;
-
-      .slider:before {
-          background-image: url("/img/SVG/crescent-moon-svgrepo-com.svg");
-          background-size: 15px 15px;
-          background-position: 6px;
-          background-color: #1d2225;
-      }
-
-      .social {
-        color: #f4f2ff;
-      }
-  
-      h3 {
-        color: #696969;
-      }
-  }
 
   font-family: "Moon 2.0";
   letter-spacing: 0.1875rem;
