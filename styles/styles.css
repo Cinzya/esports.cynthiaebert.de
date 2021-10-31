@@ -26,39 +26,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-body .container {
-  background-color: #1d2225;
-}
-
-body .container .slider:before {
-  background-image: url("/img/SVG/crescent-moon-svgrepo-com.svg");
-  background-size: 15px 15px;
-  background-position: 6px;
-  background-color: #1d2225;
-}
-
-body .container .social {
-  color: #f4f2ff;
-}
-
-body .container h3 {
-  color: #696969;
-}
-
-html {
-  min-height: 100%;
-}
-
-body {
-  font-family: "Moon 2.0";
-  letter-spacing: 0.1875rem;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body #myVideo {
@@ -75,11 +49,12 @@ body #myVideo {
 }
 
 body .container {
+  background-color: #1d2225;
   position: relative;
   left: 0;
   right: 0;
   border-radius: 5px;
-  width: 600px;
+  max-width: 600px;
   margin: 18px auto;
   text-align: center;
   z-index: 1;
@@ -178,6 +153,7 @@ body .container h2 {
 }
 
 body .container h3 {
+  color: #696969;
   text-align: left;
 }
 
@@ -206,6 +182,11 @@ body .container .socials .social {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 12px;
+  color: #f4f2ff;
+}
+
+body .container .socials .social:hover {
+  cursor: pointer;
 }
 
 body .container .socials .social img {
@@ -272,8 +253,70 @@ body .container #skills__section .skills .skill span {
   margin-left: 10px;
 }
 
+body footer {
+  z-index: 1;
+  text-align: center;
+}
+
+body footer a {
+  color: rgba(244, 242, 255, 0.2);
+  font-size: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body footer a:hover {
+  color: #f4f2ff;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 10%;
+  margin-left: -75px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (min-height: 927px) {
   body {
+    -ms-flex-line-pack: center;
+        align-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -285,8 +328,15 @@ body .container #skills__section .skills .skill span {
 }
 
 @media (max-width: 600px) {
+  body {
+    background-color: #1d2225;
+  }
   body .container {
     margin: 0;
+    background-color: initial;
+  }
+  body video {
+    display: none;
   }
 }
 

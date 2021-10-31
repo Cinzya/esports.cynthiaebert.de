@@ -14,12 +14,9 @@
 
 $container-black: #1d2225;
 $body-black: #101315;
-$blue: #358CC3; 
-
-
-html {
-  min-height: 100%;
-}
+$blue: #358CC3;
+$white: #f4f2ff;
+$grey: #696969;
 
 
 html {
@@ -27,12 +24,15 @@ html {
 }
 
 body {
-
+  background-color: $body-black;
+  color: $white;
   font-family: "Moon 2.0";
   letter-spacing: 0.1875rem;
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   #myVideo {
     object-fit: cover;
@@ -46,11 +46,12 @@ body {
   }
 
   .container {
+    background-color: $container-black;
     position: relative;
     left: 0;
     right: 0;
     border-radius: 5px;
-    width: 600px;
+    max-width: 600px;
     margin: 18px auto;
     text-align: center;
     z-index: 1;
@@ -147,6 +148,7 @@ body {
         }
 
         h3 {
+          color: $grey;
           text-align: left;
         }
 
@@ -163,7 +165,12 @@ body {
             align-items: center;
             // flex-basis: 40%;
             margin: 0 12px;
-    
+            color: #f4f2ff;
+
+            &:hover {
+              cursor: pointer;
+            }
+
             img {
               height: 32px;
             }
@@ -221,10 +228,66 @@ body {
           }
         }
     }
+
+    footer {
+      z-index: 1;
+      text-align: center;
+     
+      a {
+        color: rgba(244, 242, 255, 0.2);
+        font-size: 10px;
+        transition: 0.3s;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 10%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transition: 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  transition: 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (min-height: 927px) {
   body {
+    align-content: center;
     align-items: center;
     height: 100%;
   }
@@ -237,8 +300,13 @@ body {
 
 @media (max-width: 600px) {
   body {
+    background-color: $container-black;
     .container {
       margin: 0;
+      background-color: initial;
+    }
+    video {
+      display: none;
     }
   }
 }
